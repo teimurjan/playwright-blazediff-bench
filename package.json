@@ -1,0 +1,27 @@
+{
+  "name": "playwright-blazediff-bench",
+  "version": "1.0.0",
+  "description": "Benchmark Playwright screenshot diff: pixelmatch vs @blazediff/core",
+  "license": "ISC",
+  "type": "commonjs",
+  "scripts": {
+    "install:browsers": "playwright install chromium",
+    "capture": "playwright test capture.spec.ts",
+    "bench": "tsx bench.ts",
+    "bench:original": "playwright test screenshot.spec.ts",
+    "bench:blazediff": "cross-env NODE_OPTIONS=\"--require ./patch.js\" playwright test screenshot.spec.ts"
+  },
+  "devDependencies": {
+    "@blazediff/core": "^1.9.1",
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.0.0",
+    "@types/pixelmatch": "^5.2.6",
+    "@types/pngjs": "^6.0.5",
+    "cross-env": "^7.0.3",
+    "pixelmatch": "^7.1.0",
+    "pngjs": "^7.0.0",
+    "tinybench": "^3.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
