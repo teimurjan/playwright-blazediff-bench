@@ -17,7 +17,7 @@ type DiffFn = (
 const blazediff: DiffFn =
   (blazediffMod as any).default ?? (blazediffMod as any).diff ?? (blazediffMod as any);
 
-const VIEWPORTS = ['1280x720', '1920x1080', '3840x2160'];
+const VIEWPORTS = ['1280x720', '1920x1080', '3840x2160', 'fullpage-3840'];
 const FIXTURES_DIR = join(__dirname, 'fixtures');
 
 function loadPng(path: string): { data: Buffer; width: number; height: number } {
